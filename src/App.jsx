@@ -13,13 +13,10 @@ const App = () => {
   <div className='bg-zinc-950 text-white'>
       <BrowserRouter>
         <Navbar/>
-        
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
-            {/* <Route path='/about' element={<Features />} /> */}
             <Route path='/features' element={<Features />} />
-            {/* <Route path='/' element={< />} /> */}
             <Route path='*' element={<h1>Page Not Found</h1>} />
           </Routes>
         </BrowserRouter>
