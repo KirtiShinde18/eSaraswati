@@ -46,7 +46,7 @@ export default function Hero() {
       {/* Bottom Left Button */}
       <div className="absolute bottom-5 right-5 z-10">
         <a href="http://wa.me/919209123023">
-          <img src={WhatsAppLogoIntegration} width={80} alt="" className="ms-14 fixed bottom-15 right-6 z-10"/>
+          <img src={WhatsAppLogoIntegration} width={80} alt="" className="ms-14 fixed bottom-10 right-6 z-10"/>
         </a>
         <button className="flex items-center gap-2 px-6 py-3 rounded-xl bg-transparent backdrop-blur-md hover:scale-105 transition ">
           Lets Connect <MessageCircleHeartIcon/>

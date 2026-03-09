@@ -8,7 +8,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState("Home");
+  const [active, setActive] = useState("");
 
 
   const links = [
@@ -74,13 +74,13 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu starr */}
-      
       {open && (
         <div className="md:hidden bg-black/90 backdrop-blur border-t border-white/10 px-6 pb-6 flex flex-col gap-4 text-gray-300">
           {links.map((link) => (
             <NavLink
               key={link.name}
               to={link.href}
+              onClick={() => setOpen(false)}   // 👈 menu close karega
               className={({ isActive }) =>
                 "relative inline-block w-fit cursor-pointer " +
                 (isActive ? "text-white" : "")

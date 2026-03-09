@@ -1,4 +1,5 @@
 import { Zap, Brain, ShieldCheck, Globe, TrendingUp, HandCoins, Handshake, User } from "lucide-react";
+import WhatsAppLogoIntegration from "../assets/whatsAppLogo.png"
 
 const features = [
   { icon: <Zap size={24} />, title: "Intuitive Interface", desc: "Seamless navigation with user-friendly design. Clean layouts ensure quick adoption by all users, reducing training time significantly." },
@@ -45,6 +46,13 @@ export default function Features() {
 
         </div>
       </div>
+
+      {/* Bottom Left Button */}
+        <div className="absolute bottom-10 right-5 z-10">
+          <a href="http://wa.me/919209123023">
+            <img src={WhatsAppLogoIntegration} width={80} alt="" className="ms-14 fixed bottom-10 right-6 z-10"/>
+          </a>
+        </div>
       
     </section>
   );
