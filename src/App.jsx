@@ -4,7 +4,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
 import Features from './Pages/Features'
 import About from './Pages/About'
-import Feature from './Pages/feature'
+import Feature from './Pages/Features'
 
 const App = () => {
   return (
