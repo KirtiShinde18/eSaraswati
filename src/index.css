@@ -67,3 +67,11 @@ transform: translateY(0);
 }
 
 /* image animations end  */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}

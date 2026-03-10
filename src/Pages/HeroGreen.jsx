@@ -1,4 +1,4 @@
-import { ArrowRight, ChartBarIcon, MessageCircleHeartIcon } from "lucide-react";
+import {  DownloadIcon, } from "lucide-react";
 import { useEffect, useState } from "react";
 import WhatsAppLogoIntegration from "../assets/whatsAppLogo.png"
 
@@ -32,13 +32,13 @@ useEffect(() => {
     <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
 
       {/* Spline Background */}
-      {showSpline && (
+      {/* {showSpline && (
         <spline-viewer
           loading="lazy"
           url="https://prod.spline.design/ZvI8X-TY1NLfzFOA/scene.splinecode"
           className="absolute top-0 left-0 w-full h-full"
         ></spline-viewer>
-      )}
+      )} */}
 
       {/* Floating Orbs */}
       <div className="absolute w-72 h-72 bg-green-500/30 rounded-full blur-3xl animate-float top-20 left-20 will-change-transform"></div>
@@ -62,25 +62,32 @@ useEffect(() => {
           We seamlessly blend cutting-edge technology with accessibility, transforming how 
           institutions deliver world-class learning experiences. Witness the future of education unfold.
         </p>
+
+        <div className="flex gap-4 justify-center mt-8 text-xl">
+          <a href="/e-Saraswati.pdf" download>
+            <button className="flex items-center gap-2 px-4 py-2 md:px-8 md:py-4 text-lg md:text-xl rounded-xl bg-gradient-to-r from-green-500 to-indigo-500 hover:scale-105 transition">
+              Download Pdf <DownloadIcon size={24}/>
+            </button>
+          </a>
+        </div>
+
       </div>
 
-      {/* WhatsApp Button */}
-      <div className="absolute bottom-5 right-5 z-10">
-        <a href="http://wa.me/918949532885">
-          <img
-            src={WhatsAppLogoIntegration}
-            width={80}
-            loading="lazy"
-            alt=""
-            className="ms-14 fixed bottom-10 right-6 z-10"
-          />
-        </a>
-
-        <button className="flex items-center gap-2 px-6 py-3 rounded-xl bg-transparent backdrop-blur-md hover:scale-105 transition">
+      {/* WhatsApp */}
+        <div className="absolute bottom-10 right-5 z-10">
+          <a href="http://wa.me/918949532885">
+            <img
+              src={WhatsAppLogoIntegration}
+              width={80}
+              loading="lazy"
+              alt=""
+              className="fixed bottom-10 right-6 z-10"
+            />
+          </a>
+        </div>
+      {/* <button className="flex items-center gap-2 px-6 py-3 rounded-xl bg-transparent backdrop-blur-md hover:scale-105 transition">
           Lets Connect <MessageCircleHeartIcon/>
-        </button>
-
-      </div>
+        </button> */}
 
     </section>
   );

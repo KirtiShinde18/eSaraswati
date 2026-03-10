@@ -159,7 +159,7 @@ function About() {
                 We leverage our deep expertise to craft bespoke solutions, specializing in transformative education technology and powerful 
                 business applications that drive progress and inspire growth. Discover more at <span className="text-green-400"><b>kdwebsoft.com.</b></span> </p>            
 
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-center mt-10">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mt-10">
                     {futureTechnology.map((item, i) => (
                       <div key={i} className="flex flex-col items-center">
                         <img
