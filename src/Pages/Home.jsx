@@ -1,26 +1,31 @@
-import React from 'react'
+
+
+import React, { Suspense, lazy } from 'react'
 import Navbar from '../components/Navbar'
-import Hero from './Hero'
-import HeroGreen from './HeroGreen'
+import About from './About'
 import Features from './Features'
 import Footer from '../components/Footer'
 import CursorGlow from './CursorGlow'
-import About from './About'
+
+const HeroGreen = lazy(() => import('./HeroGreen'))
 
 const Home = () => {
-  return <>
+  return (
+    <div className="h-full overflow-auto grid-bg">
 
-  <div className="h-full overflow-auto grid-bg">
+      <CursorGlow/>
+      <Navbar/>
 
-  <CursorGlow/>
-  <Navbar/>
-  <HeroGreen/>
-  <About/>
-  <Features/>
-  <Footer/>
+      <Suspense fallback={<div className="h-screen"></div>}>
+        <HeroGreen/>
+      </Suspense>
 
-  </div>
-  </>
+      <About/>
+      <Features/>
+      <Footer/>
+
+    </div>
+  )
 }
 
 export default Home
