@@ -49,7 +49,7 @@ useEffect(() => {
           Now in Public
         </span>
 
-        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mt-6 leading-tight">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mt-6 leading-tight">
           <span className="bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">
             Bridging Tradition ,
           </span>
@@ -79,6 +79,7 @@ useEffect(() => {
         <button className="flex items-center gap-2 px-6 py-3 rounded-xl bg-transparent backdrop-blur-md hover:scale-105 transition">
           Lets Connect <MessageCircleHeartIcon/>
         </button>
+
       </div>
 
     </section>
