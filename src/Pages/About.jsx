@@ -11,6 +11,7 @@ import future2 from "../assets/future-2.png"
 import future3 from "../assets/future-3.png"
 import future4 from "../assets/future-4.png"
 import future5 from "../assets/future-5.png"
+import Footer from "../components/Footer"
 
 function About() {
 
@@ -391,7 +392,9 @@ function About() {
         </a>
       </div>
 
+      <Footer/>
     </section>
+    
   )
 }
 

@@ -103,27 +103,15 @@ export default function Hero() {
   const [showSpline, setShowSpline] = useState(false);
 
   // Lazy load Spline after 1s or after user scroll (mobile friendly)
-  // useEffect(() => {
-  //   const isMobile = window.innerWidth < 768;
-
-  //   const timer = setTimeout(() => {
-  //     setShowSpline(true);
-  //   }, isMobile ? 1000 : 500); // slower for mobile
-
-  //   return () => clearTimeout(timer);
-  // }, []);
-
   useEffect(() => {
-  const isMobile = window.innerWidth < 768;
+    const isMobile = window.innerWidth < 768;
 
-  if (!isMobile) {
     const timer = setTimeout(() => {
-      // setShowSpline(true);
-    }, 500);
+      setShowSpline(true);
+    }, isMobile ? 1000 : 500); // slower for mobile
 
     return () => clearTimeout(timer);
-  }
-}, []);
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">

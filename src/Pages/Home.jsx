@@ -20,8 +20,8 @@ const Home = () => {
         <HeroGreen/>
       </Suspense>
 
-      <About/>
-      <Features/>
+      {/* <About/>
+      <Features/> */}
       <Footer/>
 
     </div>

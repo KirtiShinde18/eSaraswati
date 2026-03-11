@@ -12,6 +12,7 @@ import ai3 from "../assets/ai-3.png"
 import ai4 from "../assets/ai-4.png"
 
 import DashboardImage from "../assets/dashboardImages.png"
+import Footer from "../components/Footer"
 
 
 function Features() {
@@ -826,6 +827,8 @@ function Features() {
           />
         </a>
       </div>
+
+      <Footer/>
 
     </section>
   )
