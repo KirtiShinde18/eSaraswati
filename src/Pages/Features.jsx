@@ -3,7 +3,7 @@
 import { useState, memo, useRef, useEffect } from "react"
 import CursorGlow from "./CursorGlow"
 import WhatsAppLogoIntegration from "../assets/whatsAppLogo.png"
-import { AppWindowMac, BellDotIcon, BookUser, ChevronLeft, ChevronRight, Database, FileHeart, FileSymlink, FileUser, Globe, HandHeart, Handshake, LockIcon, NotebookPen, ShieldCheck, Smartphone, Sparkles, TimerIcon, TrendingUp, User, UserPen, Users, UserX, Zap } from "lucide-react"
+import { AppWindowMac, BellDotIcon, Book, BookUser, ChevronLeft, ChevronRight, Database, Equal, FileHeart, FileSymlink, FileUser, Globe, GraduationCap, HandHeart, Handshake, Lock, LockIcon, NotebookPen, School, ShieldCheck, Smartphone, Sparkles, TimerIcon, TrendingUp, User, UserCheck, UserCog, UserPen, Users, UserX, Zap } from "lucide-react"
 
 // images 
 import ai1 from "../assets/ai-1.png"
@@ -108,9 +108,65 @@ function Features() {
 
     const UserRole = [
       {
-        img: ai1,
-        width: 90,
-        text: "AI-assisted data entry for exam results & Admission Form"
+        icon: <UserCog size={50} className="text-green-400" strokeWidth={1}/>,
+        text: "Admin",
+        // desc: "Full control over system settings and user management"
+      },
+      {
+        icon: <UserCheck size={50} className="text-green-400" strokeWidth={1}/>,
+        text: "Super Admin",
+        // desc: "Highest level of access, overseeing all administrative functions."
+      },
+
+      {
+        icon: <GraduationCap size={50} className="text-green-400" strokeWidth={1}/>,
+        text: "Teacher/Faculty",
+        
+      },
+      {
+        icon: <Equal size={50} className="text-green-400" strokeWidth={1}/>,
+        text: "Accountant",
+        
+      },
+      {
+        icon: <Book size={50} className="text-green-400" strokeWidth={1}/>,
+        text: "Librarian",
+        
+      },
+      {
+        icon: <Lock size={50} className="text-green-400" strokeWidth={1}/>,
+        text: "Warden",
+        
+      },
+      {
+        icon: <School size={50} className="text-green-400" strokeWidth={1}/>,
+        text: "Inventory Manager",
+        
+      },
+      {
+        icon: <User size={50} className="text-green-400" strokeWidth={1}/>,
+        text: "Receptionist",
+        
+      },
+      {
+        icon: <User size={50} className="text-green-400" strokeWidth={1}/>,
+        text: "Principal",
+        
+      },
+      {
+        icon: <User size={50} className="text-green-400" strokeWidth={1}/>,
+        text: "Vice Principal",
+        
+      },
+      {
+        icon: <User size={50} className="text-green-400" strokeWidth={1}/>,
+        text: "Director",
+        
+      },
+      {
+        icon: <User size={50} className="text-green-400" strokeWidth={1}/>,
+        text: "Administrator",
+        
       },
     ]
 
@@ -306,7 +362,7 @@ function Features() {
           
               </h1>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mt-10">
+             <div className="grid grid-cols-2 md:grid-cols-6 gap-6 text-center mt-10">
                     {UserRole.map((item, i) => (
                       <div key={i} className="flex flex-col items-center">
                         <img
@@ -316,29 +372,12 @@ function Features() {
                           ref={(el) => (imageRefs.current[i] = el)}
                           className="animate-on-scroll mb-3"
                         />
-                        <p className="text-gray-300">{item.text}</p>
+                        {item.icon}
+                        <p className="text-gray-300 mt-4 text-lg">{item.text}</p>
+                        <p>{item.desc}</p>
                       </div>
                     ))}
-              </div>
-
-              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                {features.map((f, i) => (
-                  <div
-                    key={i}
-                    // className="bg-zinc-900 border border-white/10 p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 ease-out card-glow"
-                    className="p-8 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-green-500/30 transition-all duration-300 card-glow"
-                  >
-                    <div className="w-12 h-12 flex items-center justify-center bg-green-500/20 rounded-xl mb-4">
-                      {f.icon}
-                    </div>
-        
-                    <h3 className="text-xl font-semibold mb-2">{f.title}</h3>
-                    <p className="text-gray-400">{f.desc}</p>
-                  </div>
-                ))}
-
-              </div>
+                </div>
 
        
             </div>
