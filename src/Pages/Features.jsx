@@ -681,7 +681,7 @@ function Features() {
           {activeTab === "Management" && (
             <div className=" space-y-4 text-gray-300">
 
-                <h1 className="mt-20 text-3xl my-10 font-bold  leading-tight font-display text-center mb-5">
+                <h1 className="mt-20 text-2xl my-10 font-bold  leading-tight font-display text-center mb-5">
                     <span className="bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">
                         Addition Management Modules
                     </span>
@@ -710,7 +710,7 @@ function Features() {
             <div className="space-y-3 text-gray-300 text-start sm:text-center">
                 <p className="text-lg">These features save significant time and improve efficiency across various school operations.</p>
 
-                <h1 className="text-3xl my-10 font-bold  leading-tight font-display text-center mb-5">
+                <h1 className="text-2xl my-10 font-bold  leading-tight font-display text-center mb-5">
                     <span className="bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">
                         AI-Powered Exam Management
                     </span>
@@ -731,7 +731,7 @@ function Features() {
                     ))}
                 </div>
 
-                <h1 className=" mt-36 text-3xl my-10 font-bold  leading-tight font-display text-center mb-5">
+                <h1 className=" mt-36 text-2xl my-10 font-bold  leading-tight font-display text-center mb-5">
                     <span className="bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">
                         Comprehensive Reporting System
                     </span>
@@ -755,7 +755,7 @@ function Features() {
                 </div>
                 {/* card end  */}
 
-                <h1 className="mt-36 text-3xl my-10 font-bold  leading-tight font-display text-center mb-5">
+                <h1 className="mt-36 text-2xl my-10 font-bold  leading-tight font-display text-center mb-5">
                     <span className="bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">
                      Complete eSaraswati Module Suite
                     </span>
