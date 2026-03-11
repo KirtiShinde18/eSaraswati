@@ -7,14 +7,22 @@ export default function Hero() {
   const [showSpline, setShowSpline] = useState(false);
 
   // Load spline after UI render
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setShowSpline(true);
+  //   }, 500); 
+
+  //   return () => clearTimeout(timer);
+  // }, []);
+
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowSpline(true);
-    }, 500); 
+  const isMobile = window.innerWidth < 768;
+  const timer = setTimeout(() => {
+    setShowSpline(true);
+  }, isMobile ? 1000 : 500); // slower load on mobile
 
-    return () => clearTimeout(timer);
-  }, []);
-
+  return () => clearTimeout(timer);
+}, []);
 
 // useEffect(() => {
 //   const isMobile = window.innerWidth < 768;
@@ -28,8 +36,23 @@ export default function Hero() {
 //   }
 // }, []);
 
+useEffect(() => {
+  const handleScroll = () => {
+    setShowSpline(true);
+    window.removeEventListener("scroll", handleScroll);
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
+
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+
+      {!showSpline && (
+  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-green-200/20 to-indigo-200/20 animate-pulse"></div>
+)}
 
       {/* Spline Background */}
       {showSpline && (
