@@ -473,7 +473,7 @@ function Features() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-3 py-1.5 sm:px-6 sm:py-2 text-sm sm:text-base rounded-lg border transition ${
+              className={`px-2 py-1.5 sm:px-6 sm:py-2 text-sm sm:text-base rounded-lg border transition ${
                 activeTab === tab
                   ? "bg-green-500 text-black"
                   : "border-white/30 hover:bg-white/10"
