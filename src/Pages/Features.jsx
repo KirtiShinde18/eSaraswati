@@ -692,7 +692,10 @@ function Features() {
                       <div key={i} className="flex flex-col items-center">
 
                         {/* Icon */}
-                        <div className="flex justify-center mb-4">
+                        <div 
+                        className="flex justify-center mb-4 animate-on-scroll"
+                        ref={(el) => (imageRefs.current[i] = el)}
+                        >
                           {item.icon}
                         </div>
                         <p className="text-white text-lg mb-3"><b>{item.text}</b></p>
