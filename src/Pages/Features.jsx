@@ -3,7 +3,7 @@
 import { useState, memo, useRef, useEffect } from "react"
 import CursorGlow from "./CursorGlow"
 import WhatsAppLogoIntegration from "../assets/whatsAppLogo.png"
-import { AppWindowMac, BellDotIcon, Book, BookUser, ChevronLeft, ChevronRight, Database, Equal, FileHeart, FileSymlink, FileUser, Globe, GraduationCap, HandHeart, Handshake, Lock, LockIcon, NotebookPen, School, ShieldCheck, Smartphone, Sparkles, TimerIcon, TrendingUp, User, UserCheck, UserCog, UserPen, Users, UserX, Zap } from "lucide-react"
+import { AppWindowMac, BellDotIcon, Book, BookUser, CalendarCheck, ChevronLeft, ChevronRight, CircleUser, Database, Equal, File, FileHeart, FileSymlink, FileUser, Globe, GraduationCap, HandHeart, Handshake, Home, Lock, LockIcon, LucideHome, MessageCircle, MonitorCheck, NotebookPen, NotebookPenIcon, School, ShieldCheck, Smartphone, Sparkles, TimerIcon, TrendingUp, User, UserCheck, UserCog, UserPen, UserRoundX, Users, UserX, Van, Zap } from "lucide-react"
 
 // images 
 import ai1 from "../assets/ai-1.png"
@@ -11,10 +11,12 @@ import ai2 from "../assets/ai-2.png"
 import ai3 from "../assets/ai-3.png"
 import ai4 from "../assets/ai-4.png"
 
+import DashboardImage from "../assets/dashboardImages.png"
+
 
 function Features() {
 
-    const [activeTab, setActiveTab] = useState("Academics")
+    const [activeTab, setActiveTab] = useState("Management")
     // const [selectedFeature, setSelectedFeature] = useState(null)
     const [activeIndex, setActiveIndex] = useState(-1);
     const itemRefs = useRef([]);
@@ -23,14 +25,124 @@ function Features() {
     const [index, setIndex] = useState(0);
 
 
-    const features = [
-        { icon: <Zap size={24} />, title: "Intuitive Interface", desc: "Seamless navigation with user-friendly design. Clean layouts ensure quick adoption by all users, reducing training time significantly." },
-        { icon: <TrendingUp size={24} />, title: "Real-Time Analytics", desc: "Powerful dashboard providing instant insights. Track student performance, attendance patterns, and engagement metrics at a glance." },
-        { icon: <Handshake size={24} />, title: "Dedicated Support", desc: "Our team offers personalized assistance, ensuring smooth operation and quick resolution to any queries." },
-        { icon: <Globe size={24} />, title: "Customisable Modules", desc: "Flexible course creation tailored to diverse curricula, allowing adaptation to various educational boards or custom syllabi." },
-        { icon: <ShieldCheck size={24} />, title: "Secure Infrastructure", desc: "Cloud-based platform with enterprise-grade security. Your data remains private, encrypted, and compliant with data protection standards." },
-        { icon: <User size={24} />, title: "Client-Driven Devlopment", desc: "Built from real client experiences, our features evolve based on practical needs, not closed-room assumptions." },
+
+    const CoreModule = [
+        { 
+          icon : <MonitorCheck size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+          title: "Front Desk/Administration", 
+          desc: [
+            "Admission Enquiry/Form with Form Fee Facility",
+            "Follow Up",
+            "Advertisement Performance Index with Graphs & charts",
+            "Visitor Management",
+            "Parcel Management",
+            "Student Early Leave Management"
+          ] 
+        },
+        { 
+          icon : <GraduationCap size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+          title: "Student Management", 
+          desc: [
+            "Student Management",
+            "Document Management",
+            "ID Card Generator",
+            "Student Bulk Import Through Excel",
+            "TC & CC with Customized templates",
+            "SR Report",
+            "Income & birth certificate",
+            "Bulk Image Upload",
+            "Auto Roll NO Generator",
+            "Bulk Edit using Table & Excel",
+            "Parent–staff conversation tracking",
+          ] 
+        },
+        { 
+          icon : <CircleUser size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+          title: "Account", 
+          desc: [
+            "Dashboard with Account States Total & Day Wise with Graphs & charts",
+            "Account Reports",
+            "Income & Expense Management",
+            "Fee Management with Discount Facilities",
+            "One-Tip Payment",
+            "Challan Generator (pro)",
+            "Transaction Auto Info to Parents/Head of Institute",
+        
+          ] 
+        },
+      
+       
     ];
+
+    const AcademicOperations = [
+      { 
+        icon : <UserCheck size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        title: "Attendance", 
+        desc: [
+          "Student Attendance Management",
+          "Auto Info to Parents",
+          "Month/Year Wise Attendance Report",
+        ] 
+      },
+      { 
+        icon : <NotebookPen size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        title: "Exam Management", 
+        desc: [
+          "Grade Management",
+          "Enter Marks in Simple Way",
+          "Mark Sheets for Individual or Group of Exam",
+          "Rank & Mark List",
+          "Send marks on SMS/Whatsapp",
+          "Exam Time Table & Hall Ticket",
+          "Customized marksheet on demand ( Having 28+ design Already)",
+        ] 
+      },
+      { 
+        icon : <MessageCircle size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        title: "Communication", 
+        desc: [
+          "SMS, Email, Notice, WhatsApp Message",
+          "No Template approval required for whatsapp ",
+          "Auto SMS/Email Management",
+          "Notification (pro)",
+        ] 
+      },
+      { 
+        icon : <Van size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        title: "Transport", 
+        desc: [
+          "Manage Route",
+          "Student Report Route Wise",
+          "GPS Tracking(pro)",
+        ] 
+      },
+
+      { 
+        icon : <User size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        title: "HR", 
+        desc: [
+          "Staff Management",
+          "Staff ID Card Generator",
+          "Staff Bulk Add",
+          "Staff attendance",
+          "Staff Leave",
+          "Salary Management",
+        ] 
+      },
+       { 
+        icon : <File size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        title: "Integrated Printing & Document Solutions", 
+        desc: [
+          "One-click generation for Staff ID Cards",
+          "Print Staff Visiting Cards",
+          "Generate Student ID Cards",
+          "Automated Experience Letters for Staff",
+          "Bonafide and various Academic Certificates",
+          "Customized document printing on demand",
+        ] 
+      },
+
+    ]
 
     const eSaraswatiModule = [
         {
@@ -172,9 +284,34 @@ function Features() {
 
     const additionModule = [
       {
-        img: ai1,
-        width: 90,
-        text: "AI-assisted data entry for exam results & Admission Form"
+        icon: <UserCheck size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        text: "Class/Batch Management",
+        desc: "Efficiently organize students into classes and batches, simplifying academic administration and tracking."
+      },
+      {
+        icon: <Book size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        text: "Subject Management",
+        desc: "EManage all academic subjects, assign teachers, and track curriculum details with ease."
+      },
+      {
+        icon: <NotebookPenIcon size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        text: "Home Work & Notes Management",
+        desc: "Assign, collect, and track homework efficiently, providing students and parents with clear visibility."
+      },
+      {
+        icon: <Home size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        text: "House , Locality , Club & Section Management",
+        desc: "Categorize students into houses and sections , Locality , Club for streamlined co-curricular activities and administrative divisions."
+      },
+      {
+        icon: <CalendarCheck size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        text: "Routine Management",
+        desc: "Create and manage daily class schedules, ensuring optimal utilization of resources and time."
+      },
+      {
+        icon: <UserRoundX size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        text: "Users Right Management",
+        desc: "Define and control user access levels, ensuring data security and proper authorization for each role within the system."
       },
     ]
 
@@ -353,41 +490,43 @@ function Features() {
         {/* <div className="p-10  rounded-2xl bg-white/[0.02] border border-white/5 hover:border-green-500/30 transition-all duration-300 card-glow"> */}
           {/* Academics TAB */}
           {activeTab === "Academics" && (
-            <div className=" text-gray-300 leading-relaxed text-start sm:text-center">
-
-              <h1 className="text-3xl my-10 font-bold  leading-tight font-display text-center mb-5">
+            <div className="mt-20  text-gray-300 leading-relaxed text-start sm:text-center">
+              <h1 className="text-2xl my-10 font-bold  leading-tight font-display text-center mb-5">
                 <span className="bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">
-                    User Roles & Dashboard
-                </span>
-          
+                    Core Academic Modules
+                </span>          
               </h1>
+              
+              {/* card start */}
+              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
+                {CoreModule.map((f, i) => (
+                  <div
+                    key={i}
+                    className="text-start p-8 rounded-2xl bg-white/[0.02] border border-green-500/30 transition-all duration-300 h-[400px] flex flex-col"
+                  >
+              
+                    {/* Icon */}
+                    <div className="flex justify-center mb-4">
+                      {f.icon}
+                    </div>
+              
+                    <h3 className="text-xl font-semibold mb-4 text-center">{f.title}</h3>
+              
+                    {/* Scrollable content */}
+                    <ul className="list-disc pl-5 text-gray-400 space-y-2 overflow-y-auto">
+                      {f.desc.map((point, j) => (
+                        <li key={j}>{point}</li>
+                      ))}
+                    </ul>
+              
+                  </div>
+                ))}
+              
+              </div>
+              {/* card end */}
 
-             <div className="grid grid-cols-2 md:grid-cols-6 gap-6 text-center mt-10">
-                    {UserRole.map((item, i) => (
-                      <div key={i} className="flex flex-col items-center">
-                        <img
-                          src={item.img}
-                          width={item.width}
-                          alt=""
-                          ref={(el) => (imageRefs.current[i] = el)}
-                          className="animate-on-scroll mb-3"
-                        />
-                        {item.icon}
-                        <p className="text-gray-300 mt-4 text-lg">{item.text}</p>
-                        <p>{item.desc}</p>
-                      </div>
-                    ))}
-                </div>
-
-       
-            </div>
-          )}
-
-          {/* Management TAB */}
-          {activeTab === "Management" && (
-            <div className=" space-y-4 text-gray-300">
-
-                <h1 className="text-3xl my-10 font-bold  leading-tight font-display text-center mb-5">
+              <h1 className="mt-10 text-2xl my-10 font-bold  leading-tight font-display text-center mb-5">
                     <span className="bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">
                         Additional Academic Operations
                     </span>
@@ -400,14 +539,14 @@ function Features() {
                   {/* Buttons */}
                   <button
                     onClick={prev}
-                    className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 rounded-full bg-green-500 flex items-center justify-center"
+                    className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 rounded-full bg-black border-1  border-green-500/30 flex items-center justify-center"
                   >
                     <ChevronLeft className="text-white"/>
                   </button>
             
                   <button
                     onClick={next}
-                    className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 rounded-full bg-green-500 flex items-center justify-center"
+                    className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 rounded-full bg-black border-1  border-green-500/30 flex items-center justify-center"
                   >
                     <ChevronRight className="text-white"/>
                   </button>
@@ -420,7 +559,8 @@ function Features() {
                     {cards.map((card, i) => (
                       <div
                   key={i}
-                  className="flex-shrink-0 w-80 rounded-2xl p-6 bg-gradient-to-r from-green-300 to-green-400"
+                  // className="flex-shrink-0 w-80 rounded-2xl p-6 bg-gradient-to-r from-green-300 to-green-400"
+                  className="flex-shrink-0 w-80 p-6 rounded-2xl bg-white/[0.02] border border-green-500/30 transition-all duration-300"
                 >
                   {/* Icon + Title in one line */}
                   <div className="flex items-center gap-3 mb-4">
@@ -429,13 +569,13 @@ function Features() {
                     >
                       {card.icon}
                     </div>
-                    <h3 className="text-xl font-bold text-black">
+                    <h3 className="text-xl font-bold text-white">
                       {card.title}
                     </h3>
                   </div>
                 
                   {/* Description */}
-                  <p className="text-black text-sm">
+                  <p className="text-gray-300 text-sm">
                     {card.desc}
                   </p>
                 </div>
@@ -458,23 +598,105 @@ function Features() {
                 </div>
                 {/* carousel end */}
 
+              <h1 className="mt-10 text-2xl my-10 font-bold  leading-tight font-display text-center mb-5">
+                <span className="bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">
+                    Academic Operations
+                </span>          
+              </h1>
+              
+              {/* card start */}
+              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              
+                {AcademicOperations.map((f, i) => (
+                  <div
+                    key={i}
+                    className="text-start p-8 rounded-2xl bg-white/[0.02] border border-green-500/30 transition-all duration-300 h-[400px] flex flex-col"
+                  >
+              
+                    {/* Icon */}
+                    <div className="flex justify-center mb-4">
+                      {f.icon}
+                    </div>
+              
+                    <h3 className="text-xl font-semibold mb-4 text-center">{f.title}</h3>
+              
+                    {/* Scrollable content */}
+                    <ul className="list-disc pl-5 text-gray-400 space-y-2 overflow-y-auto">
+                      {f.desc.map((point, j) => (
+                        <li key={j}>{point}</li>
+                      ))}
+                    </ul>
+              
+                  </div>
+                ))}
+              
+              </div>
+              {/* card end */}
+
+              <h1 className="mt-20 text-2xl my-10 font-bold  leading-tight font-display text-center mb-5">
+                <span className="bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">
+                    User Roles & Dashboard
+                </span>          
+              </h1>
+
+              <div className=" mb-15 grid grid-cols-2 md:grid-cols-6 gap-6 text-center mt-10">
+                  {UserRole.map((item, i) => (
+                    <div key={i} className="flex flex-col items-center">
+                      <p 
+                      className="animate-on-scroll"
+                      ref={(el) => (imageRefs.current[i] = el)} 
+                      >{item.icon}</p>
+                      <p className="text-gray-300 mt-4 text-lg">{item.text}</p>
+                      <p>{item.desc}</p>
+                    </div>
+                  ))}
+              </div>
+
+              <h1 className="mt-20 text-2xl my-10 font-bold  leading-tight font-display text-center mb-5">
+                <span className="bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">
+                    Dynamic Dashboard Insights
+                </span>
+              </h1>
+
+              <div className="flex flex-col md:flex-row items-center gap-4">
+  
+                <p className="text-center md:text-left">
+                  <span className="text-green-400"><b>eSaraswati</b></span> 
+                  provides a dynamic, intuitive dashboard tailored to each user role, offering real-time insights into key activities, academic performance, financial transactions, and operational metrics. Visualize data through interactive graphs and charts for informed decision-making and efficient management.
+                </p>
+              
+                <img 
+                  src={DashboardImage} 
+                  alt="Dashboard" 
+                  className="w-full md:w-[500px] h-auto"
+                />
+
+              </div>
+
+       
+            </div>
+          )}
+
+          {/* Management TAB */}
+          {activeTab === "Management" && (
+            <div className=" space-y-4 text-gray-300">
+
                 <h1 className="mt-20 text-3xl my-10 font-bold  leading-tight font-display text-center mb-5">
                     <span className="bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">
                         Addition Management Modules
                     </span>
                 </h1>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mt-10">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mt-10">
                     {additionModule.map((item, i) => (
                       <div key={i} className="flex flex-col items-center">
-                        <img
-                          src={item.img}
-                          width={item.width}
-                          alt=""
-                          ref={(el) => (imageRefs.current[i] = el)}
-                          className="animate-on-scroll mb-3"
-                        />
-                        <p className="text-gray-300">{item.text}</p>
+
+                        {/* Icon */}
+                        <div className="flex justify-center mb-4">
+                          {item.icon}
+                        </div>
+                        <p className="text-white text-lg mb-3"><b>{item.text}</b></p>
+                        <p className="text-gray-300">{item.desc}</p>
                       </div>
                     ))}
                 </div>

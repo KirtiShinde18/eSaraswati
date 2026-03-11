@@ -40,6 +40,27 @@ function About() {
     },
   ];
 
+  const products = [
+    {
+      title: "LABPLEX",
+      desc: "To be the best ally globally in the area of education institute management through quality product, innovation, 24*7 customer service , professional expertise and continous improvement. Help educational Institutions around the world to gain efficiency, increase performance and cut the cost through innovative software services.",
+      image: "/images/labplex.png",
+      link : "https://www.kdwebsoft.com/index.php/labplex/"
+    },
+    {
+      title: "INTELLITEST",
+      desc: "Our Vision to change the education world using the technology. We are Burning the mid night oil to fulfil our vision. we have traveled a lot of milies to achive this vision and we have to travel lot more.",
+      image: "/images/intellitest.png",
+      link : "https://www.kdwebsoft.com/index.php/intellitest/"
+    },
+    {
+      title: "TRANSACTIPRO",
+      desc: "Making the client’s success a priority. Making only those promises we can keep. Identifying our clients’ real needs, not just delivering a product.",
+      image: "/images/transactipro.png",
+      link : "https://www.kdwebsoft.com/index.php/transactipro/"
+    },
+  ];
+
   const futureTechnology = [
     {
       img: future1,
@@ -77,7 +98,7 @@ function About() {
 
   // progress bar animation 
   useEffect(() => {
-  if (activeTab === "OurSkills") {
+  if (activeTab === "Our Products") {
     setTimeout(() => {
       setStartAnim(true)
     }, 200)
@@ -126,7 +147,7 @@ function About() {
         {/* Tabs */}
         <div className="flex justify-center gap-2 sm:gap-4 mb-10 flex-wrap">
         
-          {["company","e-saraswati","OurSkills"].map((tab)=>(
+          {["company","e-saraswati","Our Products"].map((tab)=>(
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
@@ -138,7 +159,7 @@ function About() {
             >
               {tab === "company" ? "Company" :
                tab === "e-saraswati" ? "e-Saraswati" :
-               "Our Skills"}
+               "Our Products"}
             </button>
           ))}
         
@@ -260,89 +281,54 @@ function About() {
             </div>
           )}
 
-          {/* OurSkills TAB */}
-            {activeTab === "OurSkills" && (
+          {/* Our Products TAB */}
+            {activeTab === "Our Products" && (
               <div className="space-y-8 text-gray-300 text-start sm:text-center">
             
                 <p>
-                  <span className="text-green-400"><b>Kuldeep Websoft Pvt. Ltd.</b></span> has a dedicated team of hardworking and committed skilled professional.
-                  The people at Kuldeep Websoft continuously strive to attain knowledge and increase their talent to provide the best quality solutions to our valued customers.
-                  We keep our self updated with latest Trends so our clients, can take rest and concentrate on business.
-                  We had an array of multidisciplinary skilled employees forming the core of our capability.
+                  Explore our range of high-quality products designed to deliver reliability, performance, and innovation for your needs.
                 </p>
-            
-                {/* Skills */}
-                <div className="max-w-3xl mx-auto space-y-6">
-            
-              {/* HTML */}
-              <div>
-                <div className="flex justify-between mb-1">
-                  <span>HTML, BOOTSTRAP, ANGULARJS, WORDPRESS, PWA</span>
-                  <span>100%</span>
-                </div>
-            
-                <div className="w-full bg-white/10 rounded-full h-3 overflow-hidden">
+
+                {/* Products Grid */}
+              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-7">
+
+                {products.map((f,i)=>(
                   <div
-                    className="bg-green-500 h-3 rounded-full transition-all duration-[2000ms]"
-                    style={{
-                      width: startAnim ? "100%" : "0%"
-                    }}
-                  ></div>
-                </div>
+                    key={i}
+                    className="rounded-2xl overflow-hidden bg-white/[0.02] border border-white/5 hover:border-green-500/30 transition-all duration-300 card-glow cursor-pointer"
+                  >
+
+                    <div className="h-40 w-full overflow-hidden">
+                      <img
+                        src={f.image}
+                        alt={f.title}
+                        loading="lazy"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+
+                    <div className="p-8 flex justify-between gap-2 items-center">
+
+                      <h3 className="text-xl font-semibold font-display">
+                        {f.title} 
+                      </h3>
+
+                      <a href={f.link} target="_blank" rel="noopener noreferrer">
+                        <span className="inline-flex items-center px-3 py-1 sm:px-4 sm:py-1.5 text-xs sm:text-sm bg-green-500/10 border border-green-500/30 text-green-400 rounded-full whitespace-nowrap">
+                          View
+                        </span>
+                      </a>
+
+                      
+                    </div>
+
+                    
+
+                  </div>
+                ))}
+
               </div>
-            
-              {/* JAVA */}
-              <div>
-                <div className="flex justify-between mb-1">
-                  <span>JAVA, PHP, CODEIGNITER, C, C++, NODE.JS, SQL</span>
-                  <span>100%</span>
-                </div>
-            
-                <div className="w-full bg-white/10 rounded-full h-3 overflow-hidden">
-                  <div
-                    className="bg-blue-400 h-3 rounded-full transition-all duration-[2000ms]"
-                    style={{
-                      width: startAnim ? "100%" : "0%"
-                    }}
-                  ></div>
-                </div>
-              </div>
-            
-              {/* JavaScript */}
-              <div>
-                <div className="flex justify-between mb-1">
-                  <span>JAVASCRIPT, CSS</span>
-                  <span>100%</span>
-                </div>
-            
-                <div className="w-full bg-white/10 rounded-full h-3 overflow-hidden">
-                  <div
-                    className="bg-yellow-500 h-3 rounded-full transition-all duration-[2000ms]"
-                    style={{
-                      width: startAnim ? "100%" : "0%"
-                    }}
-                  ></div>
-                </div>
-              </div>
-            
-              {/* Photoshop */}
-              <div>
-                <div className="flex justify-between mb-1">
-                  <span>PHOTOSHOP</span>
-                  <span>90%</span>
-                </div>
-            
-                <div className="w-full bg-white/10 rounded-full h-3 overflow-hidden">
-                  <div
-                    className="bg-red-500 h-3 rounded-full transition-all duration-[2000ms]"
-                    style={{
-                      width: startAnim ? "90%" : "0%"
-                    }}
-                  ></div>
-                </div>
-              </div>
-            
-            </div>
+
             
             </div>
             )}

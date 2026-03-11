@@ -116,11 +116,6 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
 
-      {/* Placeholder while Spline loads */}
-      {!showSpline && (
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-green-200/20 to-indigo-200/20 animate-pulse"></div>
-      )}
-
       {/* Spline Background */}
       {showSpline && (
         <spline-viewer
@@ -164,7 +159,7 @@ export default function Hero() {
       </div>
 
       {/* WhatsApp */}
-      <div className="absolute bottom-10 right-5 z-10 flex flex-col items-end gap-4">
+      <div className="absolute bottom-2 right-5 z-10 flex flex-col items-end gap-4">
         <a href="http://wa.me/918949532885">
           <img
             src={WhatsAppLogoIntegration}
@@ -175,7 +170,7 @@ export default function Hero() {
           />
         </a>
 
-        <button className="flex items-center gap-2 px-6 py-3 rounded-xl bg-transparent backdrop-blur-md hover:scale-105 transition">
+        <button className="flex items-center gap-2 px-6 py-3 mt-6 rounded-xl bg-transparent backdrop-blur-md hover:scale-105 transition">
           Lets Connect <MessageCircleHeartIcon />
         </button>
       </div>
