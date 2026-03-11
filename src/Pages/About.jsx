@@ -392,7 +392,6 @@ function About() {
         </a>
       </div>
 
-      <Footer/>
     </section>
     
   )

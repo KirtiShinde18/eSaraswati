@@ -828,8 +828,6 @@ function Features() {
         </a>
       </div>
 
-      <Footer/>
-
     </section>
   )
 }
