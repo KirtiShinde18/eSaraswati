@@ -21,7 +21,7 @@ useEffect(() => {
 
   if (!isMobile) {
     const timer = setTimeout(() => {
-      setShowSpline(true);
+      // setShowSpline(true);
     }, 500);
 
     return () => clearTimeout(timer);
