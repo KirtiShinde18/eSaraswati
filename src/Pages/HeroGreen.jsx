@@ -17,17 +17,28 @@ export default function Hero() {
   //   return () => clearTimeout(timer);
   // }, []);
 
-  useEffect(() => {
-  const isMobile = window.innerWidth < 768;
+//   useEffect(() => {
+//   const isMobile = window.innerWidth < 768;
 
-  if (!isMobile) {
-    const timer = setTimeout(() => {
-      // setShowSpline(true);
-    }, 500);
+//   if (!isMobile) {
+//     const timer = setTimeout(() => {
+//       // setShowSpline(true);
+//     }, 500);
 
-    return () => clearTimeout(timer);
-  }
-}, []);
+//     return () => clearTimeout(timer);
+//   }
+// }, []);
+useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+
+    if (!isMobile) {
+      const timer = setTimeout(() => {
+        setShowSpline(true);
+      }, 500);
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
