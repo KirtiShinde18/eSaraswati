@@ -233,8 +233,8 @@ function About() {
                         {f.icon}
                       </div>
 
-                      <h3 className="text-xl font-semibold font-display">
-                        {f.title} 
+                      <h3 className="text-lg sm:text-sm md:text-xl font-semibold font-display">
+                        {f.title}
                       </h3>
 
                       <span class="inline-flex items-center px-3 py-1 sm:px-4 sm:py-1.5 text-xs sm:text-sm bg-green-500/10 border border-green-500/30 text-green-400 rounded-full whitespace-nowrap">
@@ -342,33 +342,42 @@ function About() {
       {selectedFeature && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
 
-          <div className="bg-gradient-to-r from-green-400 to-green-600 border border-white/30 rounded-2xl p-8 max-w-md w-full relative">
+          {/* <div className="bg-gradient-to-r from-green-400 to-green-600 border border-white/30 rounded-2xl p-8 max-w-md w-full relative"> */}
+          <div className="bg-zinc-900 border border-green-500/30 rounded-2xl p-10 max-w-5xl w-full max-h-[90vh] overflow-y-auto relative">
 
             <button
               onClick={()=>setSelectedFeature(null)}
-              className="absolute top-4 right-4 text-gray-700 hover:text-black"
+              className="absolute top-4 right-4 text-green-400 hover:white-black"
             >
               ✕
             </button>
 
             <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 flex items-center justify-center bg-black rounded-xl text-white">
+              <div className="w-12 h-12 flex items-center justify-center bg-emerald-500/30 rounded-xl text-white">
                 {selectedFeature.icon}
               </div>
 
-              <h3 className="text-xl font-semibold text-black">
+              {/* <h3 className="text-xl font-semibold text-white">
                 {selectedFeature.title}
-              </h3>
+              </h3> */}
+
+              <h1 className="text-2xl font-bold leading-tight font-display">
+                <span className="bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">
+                  {selectedFeature.title}
+                </span>
+              </h1>
+
             </div>
 
-            <p className="text-black text-start">
+            <p className="text-white text-start">
               {selectedFeature.desc}
             </p>
 
             <div className="flex justify-end mt-5">
               <button
                 onClick={()=>setSelectedFeature(null)}
-                className="px-5 py-2 bg-black text-white rounded-lg hover:bg-zinc-800 transition"
+                // className="px-5 py-2 bg-black text-white rounded-lg hover:bg-zinc-800 transition"
+                className="bg-gradient-to-r from-green-500 to-indigo-500 px-4 py-2 rounded-lg text-white cursor-pointer"
               >
                 Cancel
               </button>

@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar'
 import About from './About'
 import CursorGlow from './CursorGlow'
 import Featuress from './Featuress'
+import Privacy from './Privacy'
 
 const HeroGreen = lazy(() => import('./HeroGreen'))
 
@@ -21,6 +22,7 @@ const Home = () => {
 
       <About/>
       <Featuress/>
+      <Privacy/>
 
     </div>
   )
