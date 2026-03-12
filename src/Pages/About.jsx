@@ -15,7 +15,7 @@ import Footer from "../components/Footer"
 
 function About() {
 
-  const [activeTab, setActiveTab] = useState("company")
+  const [activeTab, setActiveTab] = useState("e-saraswati")
   const [selectedFeature, setSelectedFeature] = useState(null)
   const [startAnim, setStartAnim] = useState(false);
   const imageRefs = useRef([])

@@ -3,8 +3,8 @@ import Navbar from './components/Navbar'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
 import Features from './Pages/Features'
+import Featuress from './Pages/Featuress'
 import About from './Pages/About'
-import Feature from './Pages/Features'
 import Footer from './components/Footer'
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/feature' element={<Feature />} />
+          <Route path='/featuress' element={<Featuress />} />
           <Route path='/features' element={<Features />} />
           <Route path='*' element={<h1>Page Not Found</h1>} />
         </Routes>
