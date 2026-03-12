@@ -2,7 +2,6 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
-import Features from './Pages/Features'
 import Featuress from './Pages/Featuress'
 import About from './Pages/About'
 import Footer from './components/Footer'
@@ -18,7 +17,6 @@ const App = () => {
           <Route path='/about' element={<About />} />
           <Route path='/featuress' element={<Featuress />} />
           <Route path='/privacy' element={<Privacy />} />
-          {/* <Route path='/features' element={<Features />} /> */}
           <Route path='*' element={<h1>Page Not Found</h1>} />
         </Routes>
 
