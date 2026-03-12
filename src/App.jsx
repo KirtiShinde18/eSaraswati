@@ -6,6 +6,7 @@ import Features from './Pages/Features'
 import Featuress from './Pages/Featuress'
 import About from './Pages/About'
 import Footer from './components/Footer'
+import Privacy from './Pages/Privacy'
 
 const App = () => {
   return (
@@ -16,7 +17,8 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/featuress' element={<Featuress />} />
-          <Route path='/features' element={<Features />} />
+          <Route path='/privacy' element={<Privacy />} />
+          {/* <Route path='/features' element={<Features />} /> */}
           <Route path='*' element={<h1>Page Not Found</h1>} />
         </Routes>
 

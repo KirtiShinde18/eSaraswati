@@ -3,9 +3,8 @@
 import React, { Suspense, lazy } from 'react'
 import Navbar from '../components/Navbar'
 import About from './About'
-import Features from './Features'
-import Footer from '../components/Footer'
 import CursorGlow from './CursorGlow'
+import Featuress from './Featuress'
 
 const HeroGreen = lazy(() => import('./HeroGreen'))
 
@@ -21,7 +20,7 @@ const Home = () => {
       </Suspense>
 
       <About/>
-      <Features/>
+      <Featuress/>
 
     </div>
   )

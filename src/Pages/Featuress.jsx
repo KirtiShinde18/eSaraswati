@@ -3,7 +3,7 @@
 import { useState, memo, useRef, useEffect } from "react"
 import CursorGlow from "./CursorGlow"
 import WhatsAppLogoIntegration from "../assets/whatsAppLogo.png"
-import { AppWindowMac, ArrowRight, BookUser, CircleUser, File, FileHeart, ForwardIcon, GraduationCap, MessageCircle, MonitorCheck, NotebookIcon, NotebookPen, TimerIcon, User, UserCheck, UserPen, Users, UserX, Van } from "lucide-react"
+import { AppWindowMac, ArrowRight, Bed, BellDotIcon, Book, BookUser, CalendarCheck, CircleUser, Cuboid, Database, Equal, File, FileHeart, FileSymlink, FileUser, Form, ForwardIcon, GraduationCap, HandHeart, Home, Library, LockIcon, MessageCircle, MonitorCheck, NotebookIcon, NotebookPen, NotebookPenIcon, School, Smartphone, TimerIcon, User, UserCheck, UserCog, UserPen, UserRoundX, Users, UserX, Van } from "lucide-react"
 import CountUp from "react-countup"
 
 // images from assets 
@@ -17,6 +17,8 @@ import ai1 from "../assets/ai-1.png"
 import ai2 from "../assets/ai-2.png"
 import ai3 from "../assets/ai-3.png"
 import ai4 from "../assets/ai-4.png"
+import ai5 from "../assets/ai-5.png"
+import ai8 from "../assets/ai-8.png"
 
 function Features() {
   const [activeTab, setActiveTab] = useState("Academics")
@@ -229,50 +231,173 @@ const AcademicsModules = [
     width : 95,
     title: "Additional Management Modules", 
     link : "#",
-    count: 6
+    count: 6,
+    modules: [
+      {
+        icon: <UserCheck size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        text: "Class/Batch Management",
+        desc: [ "Efficiently organize students into classes and batches, simplifying academic administration and tracking." ]
+      },
+      {
+        icon: <Book size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        text: "Subject Management",
+        desc:[  "EManage all academic subjects, assign teachers, and track curriculum details with ease." ]
+      },
+      {
+        icon: <NotebookPenIcon size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        text: "Home Work & Notes Management",
+        desc: [ "Assign, collect, and track homework efficiently, providing students and parents with clear visibility." ]
+      },
+      {
+        icon: <Home size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        text: "House , Locality , Club & Section Management",
+        desc: [  "Categorize students into houses and sections , Locality , Club for streamlined co-curricular activities and administrative divisions." ]
+      },
+      {
+        icon: <CalendarCheck size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        text: "Routine Management",
+        desc: [ "Create and manage daily class schedules, ensuring optimal utilization of resources and time."]
+      },
+      {
+        icon: <UserRoundX size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        text: "Users Right Management",
+        desc: ["Define and control user access levels, ensuring data security and proper authorization for each role within the system."]
+      },
+    ]
     
   },
   { 
-    img : ai1,
+    img : ai8,
     width : 95,
-    title: "Advance Features & Ai Integrations", 
+    title: "Pro Features", 
     link : "#",
-    count: 5
-    
+    count: 5,
+    modules : [
+      {
+        icon: <Smartphone size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        text: "Mobile APP",
+        desc: [ "For Staff & Admin" ]
+      },
+      
+      {
+        icon: <Library size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        text: "Library",
+        desc: [ 
+          "Manage Book Stock",
+          "Barcode",
+          "Manage Lib Members Class Wise / All with book & time limit ",
+          "Issue / Return"
+        ]
+      },
+      {
+        icon: <Cuboid size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        text: "Inventory",
+        desc: [ 
+          "Manage Supplier",
+          "Manage Store",
+          "Manage Items ",
+          "Issue & Return Item"
+        ]
+      },
+      {
+        icon: <Bed size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        text: "Hostel",
+        desc: [ 
+          "Manage Hostel",
+          "Student Leave Management ",
+          "Manage Room ",
+          "Issue students in hostel"
+        ]
+      },
+      {
+        icon: <Form size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        text: "Session Registration Form",
+        
+      },
+      
+    ]
+ 
   },
   { 
     img : Module3D7,
     width : 95,
-    title: "Reporting & Finance", 
+    title: "Complete E-Saraswati Module Suite", 
     link : "#",
-    count: 3
+    count: 8,
+    modules: [
+        {
+          title: "Security",
+          desc: ["Authentication token & OTP login, Cloud Securities, Latest Technology, User Password Change, Admin Control Rights"],
+          icon: <LockIcon size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        },
+          {
+          title: "Extensive Pre-Built Templates",
+          desc: ["Includes TC, CC, Marksheet, ID & Admit Cards, Score List, Salary Slip, Invoice, and Admission Form."],
+          icon: <FileUser size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        },
+        {
+          title: "Data Export",
+          desc: ["Excel & PDF in one Click"],
+          icon: <FileSymlink size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        },
+    
+        {
+          title: "Auto Notifications",
+          desc: ["SMS/Email/App/WhatsApp"],
+          icon: <BellDotIcon size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        },
+        {
+          title: "Multi-Branch Management",
+          icon: <Users size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        },
+        {
+          title: "Multiple Session Management",
+          icon: <Database size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        },
+        {
+          title: "Mobile Responsive & User Friendly UI",
+          icon: <Smartphone size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        },
+       
+         {
+          title: "Payment Gateway Integration",
+          icon: <HandHeart size={50} className="text-green-400 my-3" strokeWidth={1}/>,
+        },
+    
+    ]
     
   },
 ]
+  // ========== AI Modules ==========
+  const AiModules = [
+    { 
+      img: ai1,
+      width: 95,
+      title: "Ai-Powered Exam Management",
+      count: 4,
+      modules: [
+        { img: ai5, desc: ["AI-assisted data entry for exam results & Admission Form"] },
+        { img: ai2, desc: ["Automated mark calculation and grade assignment"] },
+        { img: ai3, desc: ["Excel bulk import with intelligent validation & Auto Creation of Class, Section etc."] },
+        { img: ai4, desc: ["Smart error detection and correction suggestions"] },
+      ]
+    },
 
-
-const AiModules = [
-        {
-          img: ai1,
-          width: 90,
-          text: "AI-assisted data entry for exam results & Admission Form"
-        },
-        {
-          img: ai2,
-          width: 80,
-          text: "Automated mark calculation and grade assignment"
-        },
-        {
-          img: ai3,
-          width: 80,
-          text: "Excel bulk import with intelligent validation & Auto Creation of Class, Section etc."
-        },
-        {
-          img: ai4,
-          width: 50,
-          text: "Smart error detection and correction suggestions"
-        }
+    { 
+    img : Module3D7,
+    width : 95,
+    title: "Reporting & Finance", 
+    link : "#",
+    count: 3,
+    modules: [
+        { title: "Extensive Reports", desc: ["12+ different report types available & along with customized  report from each page of app. "] },
+        { title: "Customization", desc: ["Custom report generation on demand" ]},
+        { title: "Financial Tracking", desc: ["Financial reports and fee tracking"] },
+       
     ]
+    
+  },
+  ]
 
 //=========================== Image Animation start =========================== 
     const imageRefs = useRef([]);
@@ -338,7 +463,7 @@ const AiModules = [
         
           {/* Module Count Button */}
           <button className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs sm:text-sm">
-            <CountUp end={31} duration={1.5} /> Modules
+            <CountUp end={44} duration={1.5} /> Modules
           </button>
 
 
@@ -395,6 +520,7 @@ const AiModules = [
                 </div>
               ))}
             </div>
+            
         
           </div>
         )}
@@ -402,26 +528,54 @@ const AiModules = [
         {/* AI & Advance TAB */}
         {activeTab === "Ai & Advance" && (
           <div className="space-y-4 text-gray-300">
-        
-            <h1 className="mt-20 text-2xl font-bold font-display text-center">
-              <span className="bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">
-                AI & Advanced Features
-              </span>
-            </h1>
-        
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center mt-10">
+
+            <p className="text-start text-xl">These features save significant time and imporove efficient across various school operations </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mt-10">
               {AiModules.map((item, i) => (
-                      <div key={i} className="flex flex-col items-center">
-                        <img
-                          src={item.img}
-                          width={item.width}
-                          alt=""
-                          ref={(el) => (imageRefs.current[i] = el)}
-                          className="animate-on-scroll mb-3"
-                        />
-                        <p className="text-gray-300">{item.text}</p>
-                      </div>
-                    ))}
+                <div 
+                key={i} 
+                // className="flex flex-col items-center">
+                className="text-start p-8 rounded-2xl bg-white/[0.02] border border-green-500/30 transition-all duration-300 flex flex-col">
+
+                  <div className="flex items-center gap-6 mb-6">
+
+                    <img
+                      src={item.img}
+                      width={item.width}
+                      alt=""
+                      ref={(el) => (imageRefs.current[i] = el)}
+                      className="animate-on-scroll"
+                    />
+                  
+                    <h1 className="text-xl font-bold leading-tight font-display">
+                      <span className="bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">
+                        {item.title}
+                      </span>
+                    </h1>
+
+                  </div>
+
+                  <div className="flex items-center justify-center gap-7 mt-4">
+
+                    {/* Modules Count Bubble */}
+                    {/* <span className="px-3 py-1 text-sm rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400"> */}
+                    <span className="px-3 py-1 text-sm rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 animate-pulse">
+                      <CountUp end={item.count} duration={1.5} /> Modules
+                    </span>
+                  
+                    {/* View Button */}
+   
+                    <button
+                      onClick={() => setSelectedModule(item)}
+                      className="inline-flex items-center gap-1 sm:gap-3 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm bg-green-500/10 border border-green-500/30 text-green-400 rounded-full hover:bg-green-500/20 transition"
+                    >
+                      View Details <ArrowRight size={16} className="sm:size-[20px]" />
+                    </button>
+
+                  </div>
+        
+                </div>
+              ))}
             </div>
 
 
@@ -449,87 +603,75 @@ const AiModules = [
 
       {/* modal start  */}
       {selectedModule && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-6 ">
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-6 ">
+    <div className="bg-zinc-900 border border-green-500/30 rounded-2xl p-10 max-w-5xl w-full max-h-[90vh] overflow-y-auto relative">
       
-          <div className="bg-zinc-900 border border-green-500/30 rounded-2xl p-10 max-w-5xl w-full max-h-[90vh] overflow-y-auto relative">
-      
-            <button
-              onClick={() => setSelectedModule(null)}
-              className="absolute top-5 right-6 text-gray-400 hover:text-white text-xl"
-            >
-              ✕
-            </button>
-      
-            <div className="flex items-center justify-center gap-3 sm:flex-col">
+      <button
+        onClick={() => setSelectedModule(null)}
+        className="absolute top-5 right-6 text-gray-400 hover:text-white text-xl"
+      >
+        ✕
+      </button>
 
-              <img
-                src={selectedModule.img}
-                className="w-20 sm:w-[120px]"
-              />
-            
-              <h2 className="text-sm sm:text-3xl font-bold text-left sm:text-center font-display">
-                <span className="bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">
-                  {selectedModule.title}
-                </span>
+      <div className="flex items-center justify-center gap-3 sm:flex-col">
 
-                <p className="text-center text-indigo-400 mb-8">
-                  {selectedModule.count} Modules
-                </p>
+        <img src={selectedModule.img} className="w-20 sm:w-[120px]" />
+        
+        <h2 className="text-sm sm:text-3xl font-bold text-left sm:text-center font-display">
+          <span className="bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">
+            {selectedModule.title}
+          </span>
 
-              </h2>
+          <p className="text-center text-indigo-400 mb-8">
+            {selectedModule.count} Modules
+          </p>
+        </h2>
+      </div>
 
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        {selectedModule.modules?.map((f, i) => (
+          <div
+            key={i}
+            className="p-6 rounded-2xl bg-white/[0.02] flex flex-col"
+          >
+            {/* Icon / Image */}
+            <div className="flex justify-center mb-4">
+              {f.icon ? f.icon : f.img ? <img src={f.img} width={80} alt="" /> : null}
             </div>
 
-      
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      
-              {selectedModule.modules?.map((f, i) => (
-                <div
-                  key={i}
-                  className="p-6 rounded-2xl bg-white/[0.02]  flex flex-col"
-                >
-            
-                  {/* Icon */}
-                  <div className="flex justify-center mb-4">
-                    {f.icon}
-                  </div>
-            
-                  {/* Title */}
-                  <h3 className="text-lg font-semibold mb-4 text-center">
-                    {f.title}
-                  </h3>
-                  
+            {/* Title or Text */}
+            <h3 className="text-lg font-semibold mb-4 text-center">
+              {f.title || f.text || "No Title"}
+            </h3>
 
-
-                  {/* List */}
-                  <ul className="space-y-2 text-gray-400 text-sm">
-                    {f.desc.map((point, j) => (
-                      <li key={j} className="flex items-start gap-2">
-                        <span className="text-green-400 mt-1">•</span>
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-            
-                </div>
+            {/* Description list */}
+            <ul className="space-y-2 text-gray-400 text-sm">
+              {(f.desc || []).map((point, j) => (
+                <li key={j} className="flex items-start gap-2">
+                  <span className="text-green-400 mt-1">•</span>
+                  <span>{point}</span>
+                </li>
               ))}
+            </ul>
 
-              
-      
-            </div>
-
-            <div className="flex justify-end mt-5">
-              <button 
-              onClick={() => setSelectedModule(null)}
-              className="bg-gradient-to-r from-green-500 to-indigo-500 px-4 py-2 rounded-lg text-white cursor-pointer">
-                Cancel
-            </button>
-            </div>
-            
-      
           </div>
-        </div>
-      )}
+        )) || <p className="text-center text-gray-500">No Modules Available</p>}
+
+      </div>
+
+      <div className="flex justify-end mt-5">
+        <button 
+          onClick={() => setSelectedModule(null)}
+          className="bg-gradient-to-r from-green-500 to-indigo-500 px-4 py-2 rounded-lg text-white cursor-pointer"
+        >
+          Cancel
+        </button>
+      </div>
+
+    </div>
+  </div>
+)}
       {/* modal end */}
 
 
