@@ -14,6 +14,9 @@ import Module3D5 from "../assets/module3D-5.png"
 import Module3D7 from "../assets/module3D-7.png"
 
 import ai1 from "../assets/ai-1.png"
+import ai2 from "../assets/ai-2.png"
+import ai3 from "../assets/ai-3.png"
+import ai4 from "../assets/ai-4.png"
 
 function Features() {
   const [activeTab, setActiveTab] = useState("Academics")
@@ -249,10 +252,27 @@ const AcademicsModules = [
 
 
 const AiModules = [
-  {
-
-  }
-]
+        {
+          img: ai1,
+          width: 90,
+          text: "AI-assisted data entry for exam results & Admission Form"
+        },
+        {
+          img: ai2,
+          width: 80,
+          text: "Automated mark calculation and grade assignment"
+        },
+        {
+          img: ai3,
+          width: 80,
+          text: "Excel bulk import with intelligent validation & Auto Creation of Class, Section etc."
+        },
+        {
+          img: ai4,
+          width: 50,
+          text: "Smart error detection and correction suggestions"
+        }
+    ]
 
 //=========================== Image Animation start =========================== 
     const imageRefs = useRef([]);
@@ -292,7 +312,7 @@ const AiModules = [
         {/* heading  */}
         <h1 className="sm:text-5xl text-4xl md:text-7xl font-bold mb-10 leading-tight font-display">
           <span className="bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">
-            Powerful Features 
+             Features 
           </span>
         </h1>
 
@@ -317,9 +337,10 @@ const AiModules = [
           </div>
         
           {/* Module Count Button */}
-          <button className="px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-sm">
+          <button className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-xs sm:text-sm">
             <CountUp end={31} duration={1.5} /> Modules
           </button>
+
 
         </div>
         
@@ -352,7 +373,7 @@ const AiModules = [
 
                   </div>
 
-                  <div className="flex items-center justify-center gap-3 mt-4">
+                  <div className="flex items-center justify-center gap-7 mt-4">
 
                     {/* Modules Count Bubble */}
                     {/* <span className="px-3 py-1 text-sm rounded-full bg-indigo-500/10 border border-indigo-500/30 text-indigo-400"> */}
@@ -361,16 +382,12 @@ const AiModules = [
                     </span>
                   
                     {/* View Button */}
-                    {/* <a href={item.link} target="_blank" rel="noopener noreferrer">
-                      <span className="inline-flex items-center gap-3 px-4 py-2 text-sm bg-green-500/10 border border-green-500/30 text-green-400 rounded-full hover:bg-green-500/20 transition">
-                        View Details <ArrowRight/>
-                      </span>
-                    </a> */}
+   
                     <button
                       onClick={() => setSelectedModule(item)}
-                      className="inline-flex items-center gap-3 px-4 py-2 text-sm bg-green-500/10 border border-green-500/30 text-green-400 rounded-full hover:bg-green-500/20 transition"
+                      className="inline-flex items-center gap-1 sm:gap-3 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm bg-green-500/10 border border-green-500/30 text-green-400 rounded-full hover:bg-green-500/20 transition"
                     >
-                      View Details <ArrowRight />
+                      View Details <ArrowRight size={16} className="sm:size-[20px]" />
                     </button>
 
                   </div>
@@ -392,29 +409,22 @@ const AiModules = [
               </span>
             </h1>
         
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center mt-10">
               {AiModules.map((item, i) => (
-                <div key={i} className="flex flex-col items-center">
-        
-                  {/* Icon */}
-                  <div
-                    className="flex justify-center mb-4 animate-on-scroll"
-                    ref={(el) => (imageRefs.current[i] = el)}
-                  >
-                    {item.icon}
-                  </div>
-        
-                  <p className="text-white text-lg mb-3 font-semibold">
-                    {item.text}
-                  </p>
-        
-                  <p className="text-gray-300">
-                    {item.desc}
-                  </p>
-        
-                </div>
-              ))}
+                      <div key={i} className="flex flex-col items-center">
+                        <img
+                          src={item.img}
+                          width={item.width}
+                          alt=""
+                          ref={(el) => (imageRefs.current[i] = el)}
+                          className="animate-on-scroll mb-3"
+                        />
+                        <p className="text-gray-300">{item.text}</p>
+                      </div>
+                    ))}
             </div>
+
+
         
           </div>
         )}
@@ -437,6 +447,7 @@ const AiModules = [
         </a>
       </div>
 
+      {/* modal start  */}
       {selectedModule && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-6 ">
       
@@ -449,19 +460,26 @@ const AiModules = [
               ✕
             </button>
       
-            <img src={selectedModule.img} width={120} className="mb-6 mx-auto" />
-      
-            <h2 className="text-3xl font-bold text-center mb-4 font-display">
-              <span className="bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">
-                {selectedModule.title}
-              </span>
-            </h2>
-      
-            <p className="text-center text-indigo-400 mb-8">
-              {selectedModule.count} Modules
-            </p>
-      
-      
+            <div className="flex items-center justify-center gap-3 sm:flex-col">
+
+              <img
+                src={selectedModule.img}
+                className="w-20 sm:w-[120px]"
+              />
+            
+              <h2 className="text-sm sm:text-3xl font-bold text-left sm:text-center font-display">
+                <span className="bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent">
+                  {selectedModule.title}
+                </span>
+
+                <p className="text-center text-indigo-400 mb-8">
+                  {selectedModule.count} Modules
+                </p>
+
+              </h2>
+
+            </div>
+
       
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       
@@ -480,7 +498,9 @@ const AiModules = [
                   <h3 className="text-lg font-semibold mb-4 text-center">
                     {f.title}
                   </h3>
-            
+                  
+
+
                   {/* List */}
                   <ul className="space-y-2 text-gray-400 text-sm">
                     {f.desc.map((point, j) => (
@@ -493,6 +513,8 @@ const AiModules = [
             
                 </div>
               ))}
+
+              
       
             </div>
 
@@ -508,9 +530,8 @@ const AiModules = [
           </div>
         </div>
       )}
+      {/* modal end */}
 
-      
-      
 
     </section>
   )
