@@ -13,6 +13,14 @@ body{
 
 }
 
+body {
+  user-select: none;  /* text select nahi hoga */
+}
+
+* {
+  caret-color: transparent; /* cursor / typing line hide karega */
+}
+
 
 /*------------------------Scroll Bar-----------------------*/
 ::-webkit-scrollbar {
@@ -48,9 +56,14 @@ body{
       background: radial-gradient(circle, rgba(79, 233, 192, 0.08) 0%, transparent 70%);
       pointer-events: none;
       transform: translate(-50%, -50%);
-      z-index: 0;
+      z-index: 9999;
       transition: opacity 0.3s ease;
     }
+
+  .cursor-glow-wrapper {
+  user-select: none;
+  caret-color: transparent;
+}
 
 
 .card-glow2:hover {

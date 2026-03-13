@@ -14,8 +14,7 @@ export default function Navbar() {
   const links = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Features", href: "/featuress" },
-    // { name: "Features", href: "/features" },
+    { name: "Features", href: "/features" },
     { name: "Contact", href: "/contact" },
     { name: "Privacy Policy", href: "/privacy" },
   ];
@@ -25,9 +24,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
 
         {/* Logo */}
-        <div className="flex items-center gap-2 font-bold text-xl text-white">
-          <img src={AppLogo} width={50} alt="" />
-          e-Saraswati
+        <div className="flex items-center gap-3">
+          {/* Logo */}
+          <img src={AppLogo} alt="E-Saraswati Logo" className="w-12 h-12" />
+        
+          {/* Heading */}
+          <h1 className="text-2xl font-bold font-display bg-gradient-to-r from-white to-green-500 bg-clip-text text-transparent m-0">
+            E-Saraswati
+          </h1>
         </div>
 
         {/* Desktop Menu */}
