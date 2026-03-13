@@ -87,7 +87,7 @@ const Contact = () => {
 
   return (
 
-  <section className="py-15 md:py-32 px-6 text-white min-h-screen">
+  <section className="py-25 md:py-32 px-6 text-white min-h-screen">
 
     <CursorGlow />
 

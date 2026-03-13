@@ -31,7 +31,7 @@ const Privacy = () => {
 
   return (
     <>
-      <section id="feature" className="py-15 md:py-32 px-6 text-white min-h-screen">
+      <section id="feature" className="py-25 md:py-32 px-6 text-white min-h-screen">
 
 
         <CursorGlow />

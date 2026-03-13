@@ -133,7 +133,7 @@ function About() {
 
 
   return (
-    <section id="about" className="py-15 md:py-32 px-6 text-white min-h-screen">
+    <section id="about" className="py-25 md:py-32 px-6 text-white min-h-screen">
 
       {/* Cursor Glow */}
       <CursorGlow />
