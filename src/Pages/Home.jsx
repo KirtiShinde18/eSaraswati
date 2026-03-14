@@ -7,21 +7,23 @@ import CursorGlow from './CursorGlow'
 import Privacy from './Privacy'
 import Contact from './Contact'
 import Features from './Features'
+import Facts from './Facts'
+import Hero from './Hero'
 
-const HeroGreen = lazy(() => import('./HeroGreen'))
+// const Hero = lazy(() => import('./Hero'))
 
 const Home = () => (
   <div className="h-full overflow-auto grid-bg">
 
-    <CursorGlow />
+    
     <Navbar />
-
     <Suspense fallback={<div className="h-screen"></div>}>
-      <HeroGreen />
+      <Hero />
     </Suspense>
 
     <About />
     <Features />
+    <Facts/>
     <Contact />
     <Privacy />
 

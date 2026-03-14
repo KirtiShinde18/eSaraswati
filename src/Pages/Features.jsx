@@ -445,7 +445,7 @@ const AcademicsModules = [
       <section id="feature" className="py-25 md:py-32 px-6 text-white min-h-screen">
 
       {/* Cursor Glow */}
-      <CursorGlow />
+      {/* <CursorGlow /> */}
 
 
       <div className="max-w-7xl mx-auto text-center">

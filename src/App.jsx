@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import Privacy from './Pages/Privacy'
 import Contact from './Pages/Contact'
 import Features from './Pages/Features'
+import Facts from './Pages/Facts'
 
 
 
@@ -20,6 +21,7 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/features' element={<Features />} />
+          <Route path='/facts' element={<Facts />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/privacy' element={<Privacy />} />
           <Route path='*' element={<h1>Page Not Found</h1>} />

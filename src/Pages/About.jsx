@@ -136,7 +136,7 @@ function About() {
     <section id="about" className="py-25 md:py-32 px-6 text-white min-h-screen">
 
       {/* Cursor Glow */}
-      <CursorGlow />
+      {/* <CursorGlow /> */}
       <div className="max-w-7xl mx-auto text-center">
 
         <h1 className="sm:text-5xl text-4xl md:text-7xl font-bold mb-10 leading-tight font-display">

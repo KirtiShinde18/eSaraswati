@@ -89,7 +89,7 @@ const Contact = () => {
 
   <section className="py-25 md:py-32 px-6 text-white min-h-screen">
 
-    <CursorGlow />
+    {/* <CursorGlow /> */}
 
     <div className="max-w-7xl mx-auto text-center">
 
@@ -156,7 +156,7 @@ const Contact = () => {
           </div>
       
           {/* Contact Info Cards */}
-          <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5">
       
             {/* Address Card with Icon */}
             <div className="bg-zinc-900 border border-green-500/30 p-4 rounded-xl shadow hover:shadow-lg transition flex items-start gap-4">

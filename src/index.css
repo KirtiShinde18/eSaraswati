@@ -60,7 +60,7 @@ body {
       transition: opacity 0.3s ease;
     }
 
-  .cursor-glow-wrapper {
+.cursor-glow-wrapper {
   user-select: none;
   caret-color: transparent;
 }
