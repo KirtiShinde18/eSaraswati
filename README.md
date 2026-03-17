@@ -1,6 +1,8 @@
  <!-- Heading -->
 
  <h1>📚 E-Saraswati - School Management Institute </h1> 
+
+
  <p>
    E-Saraswati is a modern School Management System designed to digitize and simplify academic and administrative operations.
 The platform integrates biometric attendance, geo-fencing technology, and centralized management modules to improve efficiency, transparency, and security in educational institutions.
@@ -48,11 +50,11 @@ The platform integrates biometric attendance, geo-fencing technology, and centra
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="/.github/images/img1.png" width="45%" />
-  <img src="/.github/images/img2.png" width="45%" />
+  <img src="/.github/images/img-1.png" width="45%" />
+  <img src="/.github/images/img-2.png" width="45%" />
 </p>
 
 <p align="center">
-  <img src="/.github/images/img3.png" width="45%" />
-  <img src="/.github/images/img4.png" width="45%" />
+  <img src="/.github/images/img-3.png" width="45%" />
+  <img src="/.github/images/img-4.png" width="45%" />
 </p>
