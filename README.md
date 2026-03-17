@@ -1,6 +1,7 @@
+<a name="readme-top"></a>
+ 
  <!-- Heading -->
-
- <h1>📚 E-Saraswati - School Management Institute </h1> 
+ # 📚 E-Saraswati - School Management Institute
 
 
  <p>
@@ -50,11 +51,31 @@ The platform integrates biometric attendance, geo-fencing technology, and centra
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="/.github/images/img-1.png" width="45%" />
-  <img src="/.github/images/img-2.png" width="45%" />
+  <img src="/.github/images/img-1.png"  />
+  <img src="/.github/images/img-2.png" />
 </p>
 
 <p align="center">
-  <img src="/.github/images/img-3.png" width="45%" />
-  <img src="/.github/images/img-4.png" width="45%" />
+  <img src="/.github/images/img-3.png"  />
+  <img src="/.github/images/img-4.png" />
 </p>
+
+<p align="center">
+  <img src="/.github/images/img-5.png"  />
+  <img src="/.github/images/img-6.png" />
+</p>
+
+<p align="center">
+  <img src="/.github/images/img-7.png"  />
+
+</p>
+
+## :gear: Tech Stack
+
+[![React](https://skillicons.dev/icons?i=react)](https://react.dev/) &nbsp;
+[![Vite](https://skillicons.dev/icons?i=vite)](https://vitejs.dev/) &nbsp;
+[![TS](https://skillicons.dev/icons?i=ts)](https://www.typescriptlang.org/) &nbsp;
+[![Tailwind](https://skillicons.dev/icons?i=tailwind)](https://tailwindcss.com/) &nbsp;
+[![Vercel](https://skillicons.dev/icons?i=vercel)](https://vercel.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
