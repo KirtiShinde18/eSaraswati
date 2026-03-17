@@ -45,12 +45,14 @@ The platform integrates biometric attendance, geo-fencing technology, and centra
   
  </ul>
 
- ## :camera: Screenshots:
+## 📸 Screenshots
 
-![Showcase your skills](/.github/images/img1.png "Showcase your skills")
+<p align="center">
+  <img src="/.github/images/img1.png" width="45%" />
+  <img src="/.github/images/img2.png" width="45%" />
+</p>
 
-![Showcase your projects](/.github/images/img2.png "Showcase your projects")
-
-![Modern UI/UX](/.github/images/img3.png "Modern UI/UX")
-
-![Functional Contact form](/.github/images/img4.png "Functional Contact form")
+<p align="center">
+  <img src="/.github/images/img3.png" width="45%" />
+  <img src="/.github/images/img4.png" width="45%" />
+</p>
