@@ -2,7 +2,7 @@
  
  <!-- Heading -->
  # 📚 E-Saraswati - School Management Institute
-
+<img src="/.github/images/img-1.png"  />
 
  <p>
    E-Saraswati is a modern School Management System designed to digitize and simplify academic and administrative operations.
@@ -48,27 +48,56 @@ The platform integrates biometric attendance, geo-fencing technology, and centra
   
  </ul>
 
-## 📸 Screenshots
+## :bangbang: Folder Structure
 
-<p align="center">
-  <img src="/.github/images/img-1.png"  />
-  <img src="/.github/images/img-2.png" />
-</p>
-
-<p align="center">
-  <img src="/.github/images/img-3.png"  />
-  <img src="/.github/images/img-4.png" />
-</p>
-
-<p align="center">
-  <img src="/.github/images/img-5.png"  />
-  <img src="/.github/images/img-6.png" />
-</p>
-
-<p align="center">
-  <img src="/.github/images/img-7.png"  />
-
-</p>
+Here is the folder structure of this app.
+ <!--- FOLDER_STRUCTURE_START --->
+```bash
+e-Saraswati/
+│
+├── public/                  # Static files (favicon, images, etc.)
+│
+├── src/
+│   ├── assets/              # Images, icons, logos
+│   │   ├── AppLogo.png
+│   │   └── ...
+│   │
+│   ├── components/          # Reusable UI components
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   └── CursorGlow.jsx
+│   │
+│   ├── pages/               # All pages (routing)
+│   │   ├── Home.jsx
+│   │   ├── About.jsx
+│   │   ├── Features.jsx
+│   │   ├── Contact.jsx
+│   │   └── Privacy.jsx
+│   │
+│   ├── routes/              # Route configuration (optional but clean)
+│   │   └── AppRoutes.jsx
+│   │
+│   ├── hooks/               # Custom hooks
+│   │   └── useSomething.js
+│   │
+│   ├── utils/               # Helper functions
+│   │   └── helpers.js
+│   │
+│   ├── App.jsx              # Main app component
+│   ├── main.jsx             # Entry point
+│   └── index.css            # Tailwind/global styles
+│
+├── .github/
+│   └── images/              # README screenshots
+│
+├── .gitignore
+├── index.html
+├── package.json
+├── vite.config.js
+├── tailwind.config.js
+└── README.md
+```
+<!--- FOLDER_STRUCTURE_END --->
 
 ## :gear: Tech Stack
 
